@@ -1,30 +1,48 @@
-# Citizen AI – Intelligent Health Assistant 🤖🌿
+# 🩺 Citizen AI – Intelligent Health Assistant
 
-This project is a Generative AI-powered health assistant built using **Google Colab**, **Gradio**, and **Hugging Face Transformers**.
+A Generative AI-powered health assistant that:
+- ✅ Predicts diseases based on user symptoms
+- 🌿 Suggests home remedies for common illnesses
+- Built with 🤗 Hugging Face models + Streamlit UI
+- Deployed and tested on Google Colab & locally via VS Code
 
-## 🔍 Features
-- **Symptoms Identifier**: Predict diseases from user-reported symptoms.
-- **Home Remedies Generator**: Suggest natural remedies based on diseases.
+---
 
-## 🚀 Built With
-- Python
-- Gradio
-- Hugging Face Transformers (`flan-t5-base`)
-- Google Colab (no local setup needed)
+## 🚀 Features
 
-## 📁 Run the App
-1. Clone the repo or open the `.ipynb` in Google Colab
-2. Install required libraries:
-```python
-!pip install gradio transformers
+### 🧪 1. Symptoms Identifier
+- Enter symptoms like: `fever, cough, body pain`
+- Get AI-predicted disease like: `Flu` or `COVID-19`
 
-Run the last cell to launch the Gradio UI
+### 🌱 2. Home Remedies Generator
+- Enter disease: `Acidity` or `Cough`
+- Get natural remedies like:  
+  _"Drink cold milk, avoid spicy food"_ or _"Honey-lemon tea with turmeric"_
 
-💬 Sample Inputs
-Symptoms: fever, cold, body pain
+---
 
-Output: Flu or Covid
+## 🛠 Tech Stack
 
-Disease: Acidity
+| Tool       | Purpose                            |
+|------------|------------------------------------|
+| Python     | Core logic                         |
+| Streamlit  | UI framework                       |
+| Transformers (FLAN-T5) | Hugging Face model for prompt response |
+| Google Colab | Model testing + experimentation  |
+| VS Code    | Local development & deployment     |
 
-Remedy: Drink cold milk in the morning
+---
+
+## 📷 Screenshots
+
+![image](https://github.com/user-attachments/assets/3898da57-dd4b-4da0-94c9-ee63ff911e4f)
+
+
+---
+
+## 💡 Prompt Engineering
+
+We used few-shot examples and medical context to guide the model:
+```text
+Symptoms: dry cough, body pain, loss of smell  
+Expected Output: COVID-19
